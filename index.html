@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Timestamp microservice</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<style type="text/css">
+		li {
+			margin-bottom: 15px;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<h1>Timestamp microservice</h1>
+	<blockquote>
+		User Story:
+		<ol>
+			<li>I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: January 1, 2016).</li>
+			<li>If it does, it returns both the Unix timestamp and the natural language form of that date.</li>
+			<li> If it does not contain a date or Unix timestamp, it returns null for those properties.</li>
+		</ol>
+	</blockquote>
+	<h1>Example usage:</h1>
+	<code>https://morning-hollows-81586.herokuapp.com/January%2023,%202017</code><br>
+	<code>https://morning-hollows-81586.herokuapp.com/1485184064</code>
+	<h1>Example output:</h1>
+	<code>
+		{
+			"unix": 1485184064,
+			"natural": "January 23, 2017"
+		}
+	</code>
+</div>
+</body>
+</html>
